@@ -1,13 +1,329 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>wastewise</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#123d2b">
+    <meta name="description"
+          content="WasteWise helps you sort waste and discover smarter recycling practices.">
+
+    <title>WasteWise | A Greener Tomorrow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="announcement">
+        <span>🌱</span> Small actions today. A greener planet tomorrow.
+    </div>
+
+    <header class="navbar">
+        <a href="#home" class="brand">
+            <span class="brand-icon">♻</span>
+            <span>Waste<span class="brand-light">Wise</span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="navigation">
+            <a href="#home">Home</a>
+            <a href="#categories">Waste Guide</a>
+            <a href="#analyzer">Analyze Waste</a>
+            <a href="#impact">Our Impact</a>
+        </nav>
+
+        <a href="#analyzer" class="nav-cta">Get Started ↗</a>
+    </header>
+
+    <main>
+        <section class="hero section" id="home">
+            <div class="hero-copy">
+                <div class="eyebrow">
+                    <span class="live-dot"></span>
+                    SMARTER WASTE. BETTER FUTURE.
+                </div>
+
+                <h1>Waste less.<br>
+                    <span>Live greener.</span><br>
+                    Start today.
+                </h1>
+
+                <p class="hero-description">
+                    Turn everyday waste into an opportunity.
+                    Discover the right way to sort, recycle and
+                    dispose of waste for a cleaner planet.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#analyzer" class="btn btn-primary">
+                        Explore Waste Solutions <span>↗</span>
+                    </a>
+                    <a href="#categories" class="text-link">
+                        Explore waste guide →
+                    </a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="avatar-stack">
+                        <span>🌱</span>
+                        <span>♻️</span>
+                        <span>🌍</span>
+                    </span>
+                    <span>Make your everyday choices count.</span>
+                </div>
+            </div>
+
+            <div class="hero-art">
+                <div class="art-glow"></div>
+                <img
+                    src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1100&q=85"
+                    alt="Sunlight shining through a green forest"
+                    class="forest-image"
+                >
+
+                <div class="floating-card floating-top">
+                    <span class="floating-icon">🌿</span>
+                    <div>
+                        <strong>Choose sustainably</strong>
+                        <small>One habit at a time</small>
+                    </div>
+                </div>
+
+                <div class="floating-card floating-bottom">
+                    <span class="recycle-symbol">♻</span>
+                    <div>
+                        <strong>Waste has value</strong>
+                        <small>Sort it. Reuse it. Recycle it.</small>
+                    </div>
+                </div>
+
+                <div class="hero-badge">
+                    <span>🌎</span>
+                    <strong>Our planet.<br>Our responsibility.</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="value-strip">
+            <div><span>01</span> Reduce unnecessary waste</div>
+            <div><span>02</span> Sort waste responsibly</div>
+            <div><span>03</span> Build greener habits</div>
+        </section>
+
+        <section class="section categories-section" id="categories">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">KNOW YOUR WASTE</div>
+                    <h2>Every waste type<br>has a <span>better way.</span></h2>
+                </div>
+                <p>Different materials need different disposal methods.
+                   Learn where your waste belongs.</p>
+            </div>
+
+            <div class="category-grid">
+                <article class="category-card organic">
+                    <div class="category-top">
+                        <span class="category-icon">🍃</span>
+                        <span class="category-number">01</span>
+                    </div>
+                    <h3>Organic Waste</h3>
+                    <p>Food scraps, fruit peels and garden waste.</p>
+                    <div class="category-footer">
+                        <span>Try composting</span>
+                        <span>↗</span>
+                    </div>
+                </article>
+
+                <article class="category-card plastic">
+                    <div class="category-top">
+                        <span class="category-icon">🧴</span>
+                        <span class="category-number">02</span>
+                    </div>
+                    <h3>Plastic</h3>
+                    <p>Bottles, containers and suitable packaging.</p>
+                    <div class="category-footer">
+                        <span>Check recycling rules</span>
+                        <span>↗</span>
+                    </div>
+                </article>
+
+                <article class="category-card paper">
+                    <div class="category-top">
+                        <span class="category-icon">📦</span>
+                        <span class="category-number">03</span>
+                    </div>
+                    <h3>Paper & Cardboard</h3>
+                    <p>Paper sheets, cartons and cardboard boxes.</p>
+                    <div class="category-footer">
+                        <span>Keep clean and dry</span>
+                        <span>↗</span>
+                    </div>
+                </article>
+
+                <article class="category-card electronic">
+                    <div class="category-top">
+                        <span class="category-icon">🔋</span>
+                        <span class="category-number">04</span>
+                    </div>
+                    <h3>E-Waste</h3>
+                    <p>Old electronics, cables and batteries.</p>
+                    <div class="category-footer">
+                        <span>Use authorized collection</span>
+                        <span>↗</span>
+                    </div>
+                </article>
+
+                <article class="category-card metal">
+                    <div class="category-top">
+                        <span class="category-icon">🥫</span>
+                        <span class="category-number">05</span>
+                    </div>
+                    <h3>Metal</h3>
+                    <p>Suitable cans and other recyclable metal items.</p>
+                    <div class="category-footer">
+                        <span>Separate for recycling</span>
+                        <span>↗</span>
+                    </div>
+                </article>
+
+                <article class="category-card general">
+                    <div class="category-top">
+                        <span class="category-icon">🗑️</span>
+                        <span class="category-number">06</span>
+                    </div>
+                    <h3>General Waste</h3>
+                    <p>Residual waste that cannot be recycled locally.</p>
+                    <div class="category-footer">
+                        <span>Follow local guidance</span>
+                        <span>↗</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="analyzer-section" id="analyzer">
+            <div class="analyzer-layout section">
+                <div class="analyzer-copy">
+                    <div class="eyebrow">YOUR WASTE, YOUR ACTION</div>
+                    <h2>Not sure what<br>to do with <span>your waste?</span></h2>
+                    <p>
+                        Choose a waste category, describe the item
+                        and get a practical disposal recommendation
+                        from WasteWise.
+                    </p>
+
+                    <div class="feature-line">
+                        <span>✓</span>
+                        Simple waste classification
+                    </div>
+                    <div class="feature-line">
+                        <span>✓</span>
+                        Practical disposal guidance
+                    </div>
+                    <div class="feature-line">
+                        <span>✓</span>
+                        Better everyday habits
+                    </div>
+                </div>
+
+                <div class="analyzer-card">
+                    <div class="form-header">
+                        <div class="form-icon">♻️</div>
+                        <div>
+                            <h3>Waste Assistant</h3>
+                            <p>Let's find a better way to dispose of it.</p>
+                        </div>
+                    </div>
+
+                    <form id="wasteForm">
+                        <label for="wasteType">What type of waste is it?</label>
+                        <select id="wasteType" name="wasteType" required>
+                            <option value="">Select a category</option>
+                            <option value="plastic">Plastic</option>
+                            <option value="organic">Organic / Food Waste</option>
+                            <option value="electronic">Electronic Waste</option>
+                            <option value="paper">Paper & Cardboard</option>
+                            <option value="metal">Metal</option>
+                            <option value="general">General Waste</option>
+                        </select>
+
+                        <label for="description">Describe your waste <span>(optional)</span></label>
+                        <textarea id="description" name="description"
+                            rows="3" maxlength="500"
+                            placeholder="e.g. An empty plastic water bottle"></textarea>
+
+                        <button type="submit" class="btn btn-primary submit-btn"
+                                id="submitButton">
+                            Get Recommendation <span>→</span>
+                        </button>
+                    </form>
+
+                    <div id="result" class="result" aria-live="polite" hidden></div>
+                    <p class="privacy-note">🌱 Better choices begin with small steps.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section impact-section" id="impact">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">SMALL STEPS. BIGGER CHANGE.</div>
+                    <h2>Make sustainability<br><span>part of your routine.</span></h2>
+                </div>
+                <p>Simple, consistent habits can help reduce waste
+                   and encourage responsible resource use.</p>
+            </div>
+
+            <div class="impact-grid">
+                <article class="impact-card">
+                    <div class="impact-icon">🥬</div>
+                    <h3>Compost organics</h3>
+                    <p>Compost suitable food scraps and garden waste
+                       where local facilities or home composting are available.</p>
+                </article>
+
+                <article class="impact-card">
+                    <div class="impact-icon">🛍️</div>
+                    <h3>Reuse what you can</h3>
+                    <p>Choose reusable bags, bottles and containers
+                       to avoid unnecessary single-use products.</p>
+                </article>
+
+                <article class="impact-card">
+                    <div class="impact-icon">🔌</div>
+                    <h3>Dispose safely</h3>
+                    <p>Take batteries and electronic waste to suitable
+                       authorized collection points.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="closing-cta">
+            <div class="cta-leaf">🌿</div>
+            <h2>A cleaner planet starts<br>with <span>one better choice.</span></h2>
+            <p>Make your next waste decision a smarter one.</p>
+            <a href="#analyzer" class="btn btn-white">Get Started Today ↗</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#home" class="brand footer-brand">
+            <span class="brand-icon">♻</span>
+            <span>Waste<span class="brand-light">Wise</span></span>
+        </a>
+
+        <p>Designed for a greener tomorrow 🌍</p>
+        <a href="#home" class="back-top">Back to top ↑</a>
+        <p class="copyright">© <span id="year"></span> WasteWise · Nature Hackathon Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
