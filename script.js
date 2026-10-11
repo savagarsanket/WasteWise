@@ -67,20 +67,22 @@ form.addEventListener("submit", async (event) => {
     submitButton.textContent = "Getting recommendation...";
     result.hidden = true;
 
-    try {
-        const response = await fetch(
-            "http://localhost:5000/api/waste",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    wasteType,
-                    description
-                })
-            }
-        );
+
+try {
+    const response = await fetch(
+        "https://wastewise-naoa.onrender.com/api/waste",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                wasteType,
+                description
+            })
+        }
+    );
+
 
         const data = await response.json();
 
